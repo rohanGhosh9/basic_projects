@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Task Manager</title>
+  <link rel="stylesheet" href="projectIN.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header class="header">
+      <h1>Smart Task Tracker</h1>
+      <p>Keep your daily goals organized and saved locally.</p>
+    </header>
+
+
+    <form id="task-form" class="task-form">
+      <div class="input-group">
+        <input 
+          type="text" 
+          id="task-title" 
+          placeholder="What do you need to do?" 
+          required 
+          autocomplete="off" 
+        />
+        <select id="task-category">
+          <option value="Personal">Personal</option>
+          <option value="Work">Work</option>
+          <option value="Study">Study</option>
+        </select>
+        <button type="submit" id="add-btn">Add Task</button>
+      </div>
+    </form>
+
+   
+    <div class="controls">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="pending">Pending</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </div>
+      <button id="clear-completed-btn" class="clear-btn">Clear Completed</button>
+    </div>
+
+    <ul id="task-list" class="task-list"></ul>
+
+
+    <footer class="footer">
+      <span id="task-stats">0 tasks remaining</span>
+    </footer>
+  </div>
+
+  <script src="projectIN.js"></script>
+</body>
+</html>
